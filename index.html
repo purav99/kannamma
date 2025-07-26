@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 21 Months, Kannamma ❤️</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #0f172a;
+      color: #fce7f3;
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      font-family: 'Great Vibes', cursive;
+    }
+
+    .heart {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: fall 10s linear infinite;
+      top: -50px;
+      pointer-events: none; /* so hearts don't block clicks */
+      z-index: 0;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes fall {
+      0% { top: -10%; opacity: 1; transform: translateX(0) rotate(45deg); }
+      100% { top: 110%; opacity: 0; transform: translateX(100px) rotate(90deg); }
+    }
+
+    .firework {
+      width: 10px;
+      height: 10px;
+      background: yellow;
+      border-radius: 50%;
+      position: absolute;
+      animation: explode 1s ease-out forwards;
+      pointer-events: none; /* don't interfere with clicks */
+      z-index: 20;
+    }
+
+    @keyframes explode {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(20); opacity: 0; }
+    }
+  </style>
+</head>
+<body class="relative">
+
+  <!-- Hearts in background -->
+  <script>
+    for (let i = 0; i < 40; i++) {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDelay = Math.random() * 10 + "s";
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <!-- Page Content -->
+  <main class="relative z-10 px-4 sm:px-8 py-8 sm:py-12 space-y-16 max-w-4xl mx-auto">
+
+    <!-- Header -->
+    <section class="text-center">
+      <h1 class="text-3xl sm:text-5xl md:text-6xl font-bold text-pink-300 mb-4 px-2">
+        Happy 21 Months, My Kannamma 💖
+      </h1>
+      <p class="text-base sm:text-xl md:text-2xl max-w-4xl mx-auto text-pink-100 leading-relaxed px-2">
+        21 months of laughter, tears, growth, and unforgettable memories.<br />
+        Even with distance between us, you've always felt right here in my heart. 💕<br />
+        From sweet good mornings to late-night calls, from silly jokes to deep conversations, every moment has been a thread in the beautiful fabric of our story.<br />
+        We've built a bond that distance cannot weaken — only deepen.<br />
+        You’ve been my safe space, my cheerleader, my peace, and my chaos in the most beautiful way.<br />
+        Even when we’re miles apart, your love feels like a warm hug wrapped around my soul.<br />
+        Here’s to us — to everything we’ve shared, everything we’ve overcome, and everything that still lies ahead.<br />
+        I love you more with every sunrise, every sunset, and every second in between. 💖✨
+      </p>
+    </section>
+
+    <!-- Hidden Memories -->
+    <section class="text-center">
+      <button onclick="revealClue('clue1')" class="bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition">
+        Click for First Memory ✨
+      </button>
+
+      <div id="clue1" class="hidden mt-8 px-4">
+        <p class="mb-4 text-base sm:text-lg">You always smiled here 🥺</p>
+        <img src="/images/one.jpg" class="rounded-lg shadow-lg max-w-xs mx-auto w-full h-auto" alt="Memory 1" />
+        <button onclick="revealClue('clue2')" class="mt-4 bg-pink-600 px-4 py-2 rounded-full hover:bg-pink-700">
+          Next Clue ➡️
+        </button>
+      </div>
+
+      <div id="clue2" class="hidden mt-8 px-4">
+        <p class="mb-4 text-base sm:text-lg">Our Pure Smile 🤝</p>
+        <img src="/images/two.jpg" class="rounded-lg shadow-lg max-w-xs mx-auto w-full h-auto" alt="Memory 2" />
+        <button onclick="revealClue('clue3')" class="mt-4 bg-pink-600 px-4 py-2 rounded-full hover:bg-pink-700">
+          Next Clue ➡️
+        </button>
+      </div>
+
+      <div id="clue3" class="hidden mt-8 px-4">
+        <p class="mb-4 text-base sm:text-lg">That cute moment after a long fight 🤭</p>
+        <img src="/images/three.jpg" class="rounded-lg shadow-lg max-w-xs mx-auto w-full h-auto" alt="Memory 3" />
+        <p class="mt-6 text-pink-200 text-lg">No matter how far we are, my heart stays with you 💌</p>
+      </div>
+    </section>
+
+    <!-- Long Distance Love -->
+    <section class="max-w-3xl mx-auto text-center px-4">
+      <h2 class="text-3xl sm:text-4xl text-pink-300 mb-4">Love Across Miles 🌍</h2>
+      <p class="text-base sm:text-lg text-pink-100">
+        Even when I can’t hold your hand, I hold your heart. Long-distance can’t dim the light you shine in my life. You’re my sunshine on cloudy days, my peace in chaos, and my forever love. 💫
+      </p>
+    </section>
+
+    <!-- Timeline -->
+    <section class="max-w-4xl mx-auto text-center px-4">
+      <h2 class="text-3xl sm:text-4xl text-pink-300 mb-6">A Timeline of Us 🕰️</h2>
+      <ul class="space-y-4 text-pink-100 text-base sm:text-lg">
+        <li>💌 First “Hi” that changed everything</li>
+        <li>🎥 Late-night calls and silly selfies</li>
+        <li>💞 First fight... and first “I’m sorry” hug</li>
+        <li>🚅 Travel plans we dream of every day</li>
+        <li>📆 21 months... and forever to go!</li>
+      </ul>
+    </section>
+
+    <!-- Countdown (Optional) -->
+    <section class="text-center px-4">
+      <h2 class="text-2xl sm:text-3xl text-pink-200 mb-2">⏳ Counting down to next anniversary...</h2>
+      <p id="countdown" class="text-xl sm:text-2xl text-pink-100 font-bold"></p>
+    </section>
+
+    <!-- Open Letter -->
+    <section class="max-w-xl mx-auto text-center bg-pink-900/20 p-6 sm:p-8 rounded-2xl shadow-md px-4">
+      <h2 class="text-3xl sm:text-4xl text-pink-200 mb-4">A Letter From Me to You 💝</h2>
+      <p class="text-base sm:text-lg text-pink-100 leading-relaxed">
+        Dear Kannamma,<br />
+        I miss you more than words can hold. These months with you have filled my life with laughter, joy, and purpose. I can’t wait for the days we never have to say goodbye again. Until then, know that I’m loving you from every beat of my heart. Forever and ever. ❤️<br />
+        — Your Mad Fellow
+      </p>
+    </section>
+  </main>
+
+  <!-- Music (optional) -->
+  <audio autoplay loop class="hidden">
+    <source src="https://cdn.pixabay.com/download/audio/2023/03/02/audio_a5f5c9a41f.mp3?filename=romantic-piano-music-137747.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Firework Click -->
+  <script>
+    document.addEventListener('click', function (e) {
+      const fw = document.createElement('div');
+      fw.classList.add('firework');
+      fw.style.left = e.pageX + 'px';
+      fw.style.top = e.pageY + 'px';
+      document.body.appendChild(fw);
+      setTimeout(() => fw.remove(), 1000);
+    });
+
+    function revealClue(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    // Countdown
+    const nextAnniversary = new Date("2025-08-26T00:00:00");
+    function updateCountdown() {
+      const now = new Date();
+      const diff = nextAnniversary - now;
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(diff / (1000 * 60 * 60)) % 24;
+      const mins = Math.floor(diff / (1000 * 60)) % 60;
+      const secs = Math.floor(diff / 1000) % 60;
+      document.getElementById("countdown").textContent = `${days}d ${hours}h ${mins}m ${secs}s`;
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+
+</body>
+</html>
